@@ -2,7 +2,7 @@
 const express = require('express');
 const bodyPraser=require('body-parser');
 const app = express();
-const port=8080;
+const port=80;
 app.use(bodyPraser.json());
 
 const productRouter=require("./router/product.router") 
@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 
 // Server setup
 app.listen(port, () => {
-	console.log('server listening on port 8080');
+	console.log(`server listening on port ${port}`);
 });
